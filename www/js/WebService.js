@@ -1,7 +1,7 @@
 
 var canlogin = function() {
     document.addEventListener('deviceready', function() {
-        $(document).bind('pageinit', function() {
+//        $(document).bind('pageinit', function() {
             $.soap({
                 url: 'http://adventasoluciones.com.mx/detallistas/public/wsdl/index/soap/getCcmClienteInfo',
                 method: '',
@@ -27,6 +27,6 @@ var canlogin = function() {
                     alert('Error!');
                 }
             });
-        });
+//        });
     }, null);
 };

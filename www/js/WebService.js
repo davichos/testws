@@ -23,12 +23,18 @@ var canlogin = function() {
         alert(status);
         alert(xmlHttpRequest);
         alert(xmlHttpRequest.responseXML);
+        $("#result1").text(xmlHttpRequest.responseXML);
+        $("#result2").text(xmlHttpRequest);
+        alert(xmlHttpRequest.responseXML.find('return'));
+
          $(xmlHttpRequest.responseXML)
-                    .find('return')
-                    .each(function()
-         {
-               var name = $(this).find('Name').text();
+                    .find('return').each(function(key, value) {
+            alert(key + ": " + value);
+
          });
+        $.each(xmlHttpRequest,function (key,val){
+            alert(key + ": " + val);
+        });
     }
 
 };

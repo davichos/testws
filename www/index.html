@@ -60,7 +60,9 @@
             app.initialize();
         </script>
         <script type="text/javascript">
-            canlogin();
+            $(document).on('pagebeforeshow', '#index', function() {
+                canlogin();
+            });
         </script>
     </body>
 </html>

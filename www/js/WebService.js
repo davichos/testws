@@ -22,9 +22,12 @@ var canlogin = function() {
     function endSaveProduct(xmlHttpRequest, status) {
         alert(status);
         alert(xmlHttpRequest);
+        $.each(xmlHttpRequest,function (key,val){
+            alert(key + ": " + val);
+        });
         alert(xmlHttpRequest.responseXML);
-        $("#result1").text(xmlHttpRequest.responseXML);
-        $("#result2").text(xmlHttpRequest);
+//        $("#result1").text(xmlHttpRequest.responseXML);
+//        $("#result2").text(xmlHttpRequest);
         alert(xmlHttpRequest.responseXML.find('return'));
 
          $(xmlHttpRequest.responseXML)
@@ -32,9 +35,7 @@ var canlogin = function() {
             alert(key + ": " + value);
 
          });
-        $.each(xmlHttpRequest,function (key,val){
-            alert(key + ": " + val);
-        });
+        
     }
 
 };

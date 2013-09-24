@@ -2,8 +2,8 @@
 var canlogin = function() {
 
     var productServiceUrl = 'http://programaatusalud.com/adccmdev/public/wsdl/index/soap/getCcmClienteInfo';
-     $.mobile.allowCrossDomainPages = true;
-    $.support.cors = true;
+//     $.mobile.allowCrossDomainPages = true;
+//    $.support.cors = true;
     var s = send();
     function send() {
         alert("sending");

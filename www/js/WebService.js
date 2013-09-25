@@ -16,10 +16,6 @@ var canlogin = function() {
         elementName: null,
         enableLogging: false,
         success: function(SOAPResponse, a, b) {
-            alert(SOAPResponse);
-            $.each(SOAPResponse, function(key, value) {
-                alert("{" + key + ":" + value + "}");
-            });
             $("#result1").text(SOAPResponse.responseXML);
         },
         error: function(SOAPResponse) {

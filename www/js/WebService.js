@@ -15,8 +15,11 @@ var canlogin = function() {
         noPrefix: true,
         elementName: null,
         enableLogging: false,
-        success: function(SOAPResponse, a, b) {
-            $("#result1").text(SOAPResponse.responseXML);
+        success: function(SOAPResponse) {
+            $.each(SOAPResponse, function(key, value) {
+                alert("{" + key + ":" + value + "}");
+            });
+//            $("#result1").text(SOAPResponse.responseXML);
         },
         error: function(SOAPResponse) {
             alert('Error!');

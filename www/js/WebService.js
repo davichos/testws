@@ -4,7 +4,7 @@ var canlogin = function() {
 //        $(document).bind('pageinit', function() {
             var a=$.soap({
                 url: 'http://adventasoluciones.com.mx/detallistas/public/wsdl/index/soap/getCcmClienteInfo',
-                method: 'http://adventasoluciones.com.mx/detallistas/public/wsdl/index/soap/getCcmClienteInfo',
+                method: '',
                 appendMethodToURL: false,
                 SOAPAction: 'http://adventasoluciones.com.mx/detallistas/public/wsdl/index/soap/getCcmClienteInfo',
                 soap12: false,
@@ -19,15 +19,17 @@ var canlogin = function() {
                     alert('request');
                     alert(SOAPRequest);
                 },
-                success: function(SOAPResponse) {
+                success: function(SOAPResponse,a,b) {
                     alert('sucess');
                     alert(SOAPResponse);
+                    alert(a);
+                    alert(b);
                 },
                 error: function(SOAPResponse) {
                     alert('Error!');
                 }
             });
-            alert(a);
+//            alert(a);
 //        });
 //    }, null);
 };
